@@ -1,0 +1,16 @@
+{
+  "dir": "rtl",
+  "using": "استخدام",
+  "app": "تطبيق",
+  "byMhdtarek": "بواسطة محمد طارق",
+  "createCard": "أنشئ بطاقة لأحبائك:",
+  "selectImage": "اختر صورة:",
+  "message": "الرسالة:",
+  "recipient": "المستلم:",
+  "create": "أنشئ",
+  "successCreated": "نجاح! تم الإنشاء!",
+  "share": "مشاركة",
+  "friendCard": "بطاقة الصديق",
+  "createOnlineCard": "أنشئ بطاقة إلكترونية لأحبائك بسهولة، وعبّر عن امتنانك لهم.",
+  "createButton": "أنشئ"
+}

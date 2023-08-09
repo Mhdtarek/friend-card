@@ -1,0 +1,16 @@
+{
+  "using": "Using",
+  "app": "app",
+  "byMhdtarek": "by Mhdtarek",
+  "createCard": "Create a card for your loved one:",
+  "selectImage": "Select Image:",
+  "message": "Message:",
+  "recipient": "Recipient:",
+  "create": "Create",
+  "successCreated": "Success! Created!",
+  "share": "Share",
+  "dir": "rtl",
+  "friendCard": "Friend Card",
+  "createOnlineCard": "Create a ONLINE card for your loved ones with ease, express gratitude to them.",
+  "createButton": "Create"
+}
