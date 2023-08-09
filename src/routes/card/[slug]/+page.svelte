@@ -146,7 +146,7 @@ p {
       <p>Error: {fetchError}</p>
       {:else}
       <p>Dear {cardData.recipient}</p>
-      <p>{cardData.message}</p>
+      <p dir="auto">{cardData.message}</p>
 
       <p class="name">Using <a href="/">app</a> by Mhdtarek</p>
       {/if}
