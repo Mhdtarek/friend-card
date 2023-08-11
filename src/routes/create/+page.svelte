@@ -1,4 +1,5 @@
 <script>
+  import { _ } from 'svelte-i18n'
   import { onMount } from "svelte";
   import { initializeApp } from "firebase/app";
   import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -95,21 +96,21 @@ function copyToClipboard(text) {
 }
 </script>
 
-<div class="container">
+<div class="container" dir={$_("dir")}>
   {#if !created}
-  <h2>Create a card for your loved one:</h2>
+  <h2>{$_("createCard")}</h2>
   <form on:submit={handleSubmit} >
-    <label for="image">Select Image:</label>
+    <label for="image">{$_("selectImage")}</label>
     <input type="file" id="image" accept="image/*" on:change={handleImageUpload} />
-    <label for="message">Message:</label>
+    <label for="message">{$_("message")}</label>
     <textarea id="message" bind:value={message}></textarea>
-    <label for="recipient">Recipient:</label>
+    <label for="recipient">{$_("recipient")}</label>
     <input type="text" id="recipient" bind:value={recipient} />
-    <button type="submit" aria-busy={uploading}>Create</button>
+    <button type="submit" aria-busy={uploading}>{$_("create")}</button>
   </form>
   {/if}
   {#if created}
-    <h1>Success! Created!</h1>
-    <button on:click={() => shareOrCopyURL(url)}>Share</button>
+    <h1>{$_("successCreated")}</h1>
+    <button on:click={() => shareOrCopyURL(url)}>{$_("share")}</button>
   {/if}
 </div>

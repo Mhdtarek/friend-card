@@ -1,11 +1,14 @@
-<main class="container">
+<script>
+  import { _ } from 'svelte-i18n'
+</script>
+<main class="container" dir={$_("dir")}>
   <article class="grid">
     <div>
       <hgroup>
-        <h1>Friend Card</h1>
-        <h2>Create a ONLINE card for your loved ones with ease, express gratitude to them.</h2>
+        <h1>{$_("friendCard")}</h1>
+        <h2>{$_("createOnlineCard")}</h2>
       </hgroup>
-      <a href="/create" role="button">Create</a>
+      <a href="/create" role="button">{$_("create")}</a>
     </div>
     <div>
       <img src="/screenshot.png" alt="screenshot">

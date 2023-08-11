@@ -4,6 +4,7 @@
   import { getStorage, ref, getDownloadURL } from "firebase/storage";
   import { getFirestore, doc, getDoc } from "firebase/firestore";
   import {firebaseConfig} from "$lib/config"
+  import { _ } from 'svelte-i18n'
 
   export let data;
 
@@ -137,16 +138,16 @@ p {
 
 <main>
   <div class="birthdayCard">
-    <div class="cardFront">
-      <p class="happy">For {cardData.recipient}</p>
+    <div class="cardFront" dir={$_("dir")}>
+      <p class="happy">{$_("for")} {cardData.recipient}</p>
       <img src={cardData.imageUrl} alt="Card Front" class="cardImage" />
     </div>
     <div class="cardInside">
       {#if fetchError}
       <p>Error: {fetchError}</p>
       {:else}
-      <p>Dear {cardData.recipient}</p>
-      <p dir="auto">{cardData.message}</p>
+      <p dir={$_("dir")}>Dear {cardData.recipient}</p>
+      <p dir={$_("dir")}>{cardData.message}</p>
 
       <p class="name">Using <a href="/">app</a> by Mhdtarek</p>
       {/if}
